@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "6a59cdb5-981e-4ee5-bbcb-b121c0962a70",
+		"name": "Api_Backend_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35329485"
+	},
+	"item": [
+		{
+			"name": "Lista_contacto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Jane\",\r\n    \"last_name\": \"Smith\",\r\n    \"phone\": \"9876543210\",\r\n    \"country\": \"Canada\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/contactos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contactos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paginacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/contactos/paginados?page=1&page_size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contactos",
+						"paginados"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/contacto/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacto",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_Contacto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Ana\",\r\n  \"apellido\": \"Rosa\",\r\n  \"telefono\": \"5055-1245\",\r\n  \"pais\": \"Jamaica\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/contacto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar_Exist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Ana\",\r\n  \"apellido\": \"Rosales\",\r\n  \"telefono\": \"5055-7602\",\r\n  \"pais\": \"Costa Rica\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/contacto/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacto",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/contacto/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacto",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
